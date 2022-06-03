@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-</body>
-<script type="text/javascript">
-    'use strict';
-    const x = 10;
-    console.log(x);
-</script>
+  </head>
+  <body></body>
+  <script type="text/javascript">
+    /*The directive looks like a string: "use strict" or 'use strict'.
+            When it is located on the top of the script, then the whole script works the “modern” way.*/
+
+    "use strict"; // Defines that JavaScript code should be executed in "strict mode".
+
+    // This will cause an error because x is not declared
+    x = 3.14; //ReferenceError: x is not defined
+
+    // Declared inside a function,
+    // it has local scope (only the code inside the function is in strict mode):
+    myFunction();
+    function myFunction() {
+      ("use strict");
+      y = 3.14; // This will cause an error. ReferenceError: y is not defined
+    }
+  </script>
 </html>
