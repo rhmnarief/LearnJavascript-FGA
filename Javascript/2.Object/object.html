@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- <script src="./object.js"></script> -->
+    <!-- <script src="./this.js"></script> -->
+    <!-- <script src="./object-advance.js"></script> -->
+    <script>
+        /**
+         * @param {number[]} nums
+         * @param {number} val
+         * @return {number}
+         */
+        var removeElement = function(nums, val) {
+            let result = 0;
+            for(let i = 0 ; i < nums.length ;i++){
+                if(nums[i] === val) nums[i] = '_'
+            }
+            let resultCheck = nums.sort()
+            for(let i = 0 ; i < resultCheck.length ;i++){
+                if(typeof resultCheck[i] === 'number') result += 1
+            }
+            return result
+        };
+        console.log(removeElement([3,2,2,3], 3)) 
+
+
+
+        // const array = (input, val) => {
+        //     let us = [];
+        //     let rest = [];
+        //     for(let i = 0; i < input.length; i++){
+        //         if(input[i] === val){
+        //             input[i] = "_";
+        //             us.push(input[i]);
+        //         }
+        //         else{
+        //             rest.push(input[i]);
+        //         }
+        //     }
+        //     return rest.length;
+        // }
+
+        // function removeNums(nums,val){
+        // let temp=[]
+        //     for(let i=0;i<nums.length;i++){ 
+        //             if(nums[i]===val){
+        //                 temp.push('_')
+        //             }else{
+        //                 temp.push(nums[i])
+        //      }
+        //     }
+        // const newArr=temp.sort()
+        // const filtering=newArr.filter(item=>item!=='_')
+        // return filtering.length
+        // }
+
+    </script>
+</body>
+</html>
